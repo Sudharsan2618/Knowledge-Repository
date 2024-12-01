@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--header-bg);
+    color: var(--header-color);
+    position: relative; /* Add relative positioning */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0; /* Ensure no extra space */
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--nav-link-color);
+    transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+nav a:hover {
+    color: var(--nav-link-hover-color); /* Use a variable for hover color */
+}
+
+#theme-toggle {
+    position: absolute; /* Position it within the header */
+    right: 1rem; /* Align to the right */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust for perfect vertical alignment */
+    padding: 0.5rem 1rem; /* Optional: Add padding for better UX */
+    background-color: var(--header-color);
+    color: var(--header-bg);
+    border: none;
+    border-radius: 4px; /* Optional: Rounded corners */
+    cursor: pointer;
+}
+
+#top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#logo {
+    margin-right: 2rem; /* Add space between logo and nav */
+}
+
+#logo img {
+    height: 50px; /* Set logo height */
+    width: auto; /* Keep aspect ratio */
+}
+
+#container {
+    display: flex;
+    flex: 1;
+}
+
+aside {
+    width: 200px;
+    background-color: var(--aside-bg);
+    padding: 1rem;
+}
+
+aside a {
+    text-decoration: none;
+    color: var(--aside-link-color);
+}
+
+aside a:hover {
+    color: var(--nav-link-hover-color); /* Use a variable for hover color */
+}
+
+main {
+    flex: 1;
+    padding: 2rem;
+}
+
+footer {
+    text-align: center;
+    background-color: var(--footer-bg);
+    color: var(--footer-color);
+    margin-top: auto;
+}
+
+:root {
+    --header-bg: #ffffff;
+    --header-color: #000000;
+    --footer-bg: #f1f1f1;
+    --footer-color: #000000;
+    --body-bg: #ffffff;
+    --body-color: #000000;
+    --aside-bg: #f9f9f9;
+    --nav-link-color: #08080a; 
+    --aside-link-color: #060608; 
+    --nav-link-hover-color: #007bff; /* Blue for light theme */
+}
+
+[data-theme="dark"] {
+    --header-bg: #333333;
+    --header-color: #ffffff;
+    --footer-bg: #444444;
+    --footer-color: #ffffff;
+    --body-bg: #222222;
+    --body-color: #ffffff;
+    --aside-bg: #333333;
+    --nav-link-color: #ffffff; 
+    --aside-link-color: #ffffff; 
+    --nav-link-hover-color: #00ffff; /* Cyan for dark theme */
+}

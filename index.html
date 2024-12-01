@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Basic Python Programming</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+
+<body>
+    <header>
+        <div id="top-header">
+            <div id="logo">
+                <img src="/assets/profile-pic.png" alt="Site Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#tutorial" onclick="showNav('tutorial-nav')">Python Basics</a></li>
+                    <li><a href="#interview-questions" onclick="showNav('interview-nav')">Interview Questions</a></li>
+                    <li><a href="#test" onclick="showNav('test-nav')">Python Test</a></li>
+                </ul>
+            </nav>
+            <button id="theme-toggle">Toggle Theme</button>
+        </div>
+    </header>
+
+    <div id="container">
+        <aside id="left-nav">
+            <div id="tutorial-nav" class="nav-content">
+                <ul>
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#syntax">Syntax</a></li>
+                    <li><a href="#variables">Variables</a></li>
+                </ul>
+            </div>
+            <div id="interview-nav" class="nav-content" style="display:none;">
+                <ul>
+                    <li><a href="#basic-questions">Basic Questions</a></li>
+                    <li><a href="#advanced-questions">Advanced Questions</a></li>
+                </ul>
+            </div>
+            <div id="test-nav" class="nav-content" style="display:none;">
+                <ul>
+                    <li><a href="#mcq">Multiple Choice Questions</a></li>
+                    <li><a href="#coding">Coding Questions</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <main>
+            <section id="tutorial">
+                <h2>Python Basics Tutorial</h2>
+                <!-- Tutorial Content Here -->
+            </section>
+
+            <section id="interview-questions">
+                <h2>Python Interview Questions</h2>
+                <!-- Interview Questions Content Here -->
+            </section>
+
+            <section id="test">
+                <h2>Python Test</h2>
+                <!-- Test Content Here -->
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>Social Media Links</p>
+    </footer>
+
+    <script src="/script/main.js"></script>
+</body>
+
+</html>

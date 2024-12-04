@@ -1,0 +1,132 @@
+<h2 class="section-heading" id="control-flow">
+    <span>1. Control Flow</span>
+</h2>
+<p class="description">
+    Control flow refers to the sequence in which individual statements, instructions, or function calls are executed or evaluated in a program. In Python, control flow enables developers to manage how the program processes data and responds to user inputs or external conditions. 
+    <br><br>
+    Control flow is crucial for building logical, interactive, and dynamic programs. It allows you to implement decision-making, iteration, and branching. Without control flow, programs would execute all instructions sequentially, limiting functionality. Common control flow constructs include **conditional statements**, **loops**, and **function calls**.
+    <br><br>
+    Python provides highly intuitive constructs for control flow, enabling developers to write clean, readable, and maintainable code. These constructs support a wide range of applications, from simple scripts to complex systems.
+</p>
+
+<h2 class="section-heading" id="conditional-statements">
+    <span>2. Conditional Statements</span>
+</h2>
+<p class="description">
+    Conditional statements form the backbone of decision-making in Python programs. By evaluating conditions that return `True` or `False`, you can direct the flow of the program to execute specific blocks of code based on the outcome. 
+    <br><br>
+    Conditions can be as simple as checking whether a number is positive or negative, or as complex as verifying multiple conditions involving user input, data from APIs, or sensor readings. Python supports logical operators like `and`, `or`, and `not`, enabling you to combine multiple conditions for more sophisticated decision-making.
+    <br><br>
+    The syntax of conditional statements in Python is designed to be straightforward and beginner-friendly. Unlike other programming languages, Python uses indentation to define the scope of the conditional block, making the code highly readable and intuitive. 
+</p>
+
+<h2 class="section-heading" id="if-else">
+    <span>3. If, Else, and Elif Statements</span>
+</h2>
+<p class="description">
+    The `if`, `else`, and `elif` statements are foundational constructs for implementing branching logic in Python. These statements allow you to build programs that respond dynamically to different inputs or states:
+    <br><br>
+    - **If**: The `if` statement is used to execute a block of code only when a specified condition is true. For example:
+    <pre class="code-block">
+    if temperature > 30:
+        print("It's a hot day!")
+    </pre>
+    - **Else**: The `else` statement provides an alternative block of code that executes if the `if` condition evaluates to false. For instance:
+    <pre class="code-block">
+    if temperature > 30:
+        print("It's a hot day!")
+    else:
+        print("The weather is moderate.")
+    </pre>
+    - **Elif**: Short for "else if," the `elif` statement allows you to check additional conditions when the initial `if` condition is false. You can chain multiple `elif` statements to handle complex scenarios:
+    <pre class="code-block">
+    if temperature > 30:
+        print("It's a hot day!")
+    elif temperature < 10:
+        print("It's a cold day!")
+    else:
+        print("The weather is mild.")
+    </pre>
+    These constructs are essential for building programs that need to adapt to various inputs and situations.
+</p>
+
+<h2 class="section-heading" id="logical-operators">
+    <span>4. Logical Operators</span>
+</h2>
+<p class="description">
+    Logical operators are critical for combining multiple conditions in Python. They enable you to write expressive and concise code for scenarios that depend on complex conditions:
+    <br><br>
+    - **And**: Returns `True` if both conditions are true. For example:
+    <pre class="code-block">
+    if age > 18 and has_voter_id:
+        print("You are eligible to vote.")
+    </pre>
+    - **Or**: Returns `True` if at least one of the conditions is true. Example:
+    <pre class="code-block">
+    if age > 18 or has_voter_id:
+        print("You might be eligible to vote.")
+    </pre>
+    - **Not**: Negates the condition, returning `True` if the condition is false. Example:
+    <pre class="code-block">
+    if not is_logged_in:
+        print("Please log in to continue.")
+    </pre>
+    Logical operators are especially useful in scenarios requiring multiple checks, such as access control, validation, and decision-making.
+</p>
+
+<h2 class="section-heading" id="example-code">
+    <span>5. Example Code</span>
+</h2>
+<p class="description">
+    Below is an example that demonstrates how conditional statements and logical operators can be combined to handle real-world scenarios:
+</p>
+
+<pre class="code-block">
+# Example: Travel Recommendations Based on Age
+age = int(input("Enter your age: "))
+
+if age < 18:
+    print("You are a minor. We recommend family-friendly destinations!")
+elif 18 <= age < 30:
+    print("You might enjoy adventure trips and solo travel experiences!")
+elif 30 <= age < 60:
+    print("Consider relaxing vacation spots and cultural tours!")
+else:
+    print("Explore senior-friendly destinations with comfortable amenities!")
+
+# Logical operator example: Discount Eligibility
+is_student = True
+purchase_amount = 250
+
+if is_student and purchase_amount > 200:
+    print("You qualify for a special student discount!")
+elif is_student or purchase_amount > 200:
+    print("You qualify for a regular discount!")
+else:
+    print("No discount available.")
+</pre>
+
+<h2 class="section-heading" id="real-world-scenarios">
+    <span>6. Real-World Scenarios</span>
+</h2>
+<p class="description">
+    Conditional statements are widely used in various fields and applications:
+    <br><br>
+    - **Web Development**: Control access to resources or features based on user roles. For example, only admins can access certain sections of a website.
+    <br>
+    - **Data Analysis**: Filter rows in a dataset based on specific criteria, such as selecting rows where sales exceed a certain threshold.
+    <br>
+    - **Gaming**: Implement game mechanics like scoring, level progression, and win/lose conditions based on player actions.
+    <br>
+    - **E-Commerce**: Determine product recommendations or discounts based on user behavior and purchase history.
+    <br>
+    - **Automation**: Trigger specific actions, such as sending notifications or updating logs, when predefined conditions are met in IoT systems or server monitoring.
+</p>
+
+<ul class="resource-list">
+    <li><a href="https://docs.python.org/3/tutorial/controlflow.html#if-statements" target="_blank" rel="noopener">Python If Statements</a></li>
+    <li><a href="https://docs.python.org/3/reference/expressions.html#boolean-operations" target="_blank" rel="noopener">Boolean Operations</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/inputoutput.html" target="_blank" rel="noopener">User Input in Python</a></li>
+    <li><a href="https://docs.python.org/3/library/functions.html#input" target="_blank" rel="noopener">Input Function Documentation</a></li>
+</ul>
+

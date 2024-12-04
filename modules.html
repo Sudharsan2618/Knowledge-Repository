@@ -1,0 +1,133 @@
+<h2 class="section-heading" id="data-structures">
+    <span>1. Data Structures</span>
+</h2>
+<p class="description">
+    Data structures are a way of organizing and storing data efficiently so that it can be accessed and modified effectively. In Python, several built-in data structures exist, each serving different purposes and offering different advantages based on the type of data being handled. The most common data structures are **Lists**, **Tuples**, and **Dictionaries**.
+    <br><br>
+    Understanding the differences between these structures, as well as when to use them, is essential for writing efficient and clean code. These data structures allow developers to perform operations like searching, inserting, updating, and deleting data in various ways.
+    <br><br>
+    In this section, we will dive into each of these data structures, exploring their methods, when to use them, and examples of how they work in Python.
+</p>
+
+<h2 class="section-heading" id="lists">
+    <span>2. Lists</span>
+</h2>
+<p class="description">
+    A **list** is one of the most versatile and commonly used data structures in Python. Lists are ordered, mutable, and can store elements of any data type, including other lists. They are ideal for collections of data that need to be modified or iterated over.
+    <br><br>
+    Lists are defined using square brackets (`[]`) and elements are separated by commas. Lists allow for various operations such as adding, removing, or modifying elements, making them highly flexible.
+    <br><br>
+    Some common methods for working with lists include:
+    <ul>
+        <li><strong>append()</strong>: Adds an item to the end of the list.</li>
+        <li><strong>insert()</strong>: Inserts an item at a specified position in the list.</li>
+        <li><strong>remove()</strong>: Removes the first occurrence of an item from the list.</li>
+        <li><strong>pop()</strong>: Removes and returns the item at the specified index.</li>
+        <li><strong>sort()</strong>: Sorts the elements of the list in ascending order.</li>
+    </ul>
+    Lists are great when you need an ordered collection of items that may change over time.
+</p>
+
+<h2 class="section-heading" id="tuples">
+    <span>3. Tuples</span>
+</h2>
+<p class="description">
+    A **tuple** is similar to a list in that it is ordered, but unlike lists, tuples are immutable, meaning their elements cannot be modified once they are created. Tuples are defined using parentheses (`()`) instead of square brackets.
+    <br><br>
+    Tuples are useful when you need a collection of items that should not be modified, ensuring the integrity of the data. For example, tuples are often used for storing constant values or data that should remain unchanged throughout the program.
+    <br><br>
+    Common operations for tuples include:
+    <ul>
+        <li><strong>count()</strong>: Returns the number of occurrences of a specific item.</li>
+        <li><strong>index()</strong>: Returns the index of the first occurrence of a specific item.</li>
+    </ul>
+    Although tuples do not have as many methods as lists due to their immutability, they are efficient and can be used to group data that should not be altered.
+</p>
+
+<h2 class="section-heading" id="dictionaries">
+    <span>4. Dictionaries</span>
+</h2>
+<p class="description">
+    A **dictionary** in Python is an unordered collection of key-value pairs. Dictionaries are useful when you need to associate a value with a unique key, allowing for fast lookups. They are defined using curly braces (`{}`), with each key-value pair separated by a colon (`:`).
+    <br><br>
+    Dictionaries are incredibly efficient for retrieving data based on a key and can store a wide range of data types as values. Keys in a dictionary must be unique and immutable, while values can be of any data type.
+    <br><br>
+    Common dictionary methods include:
+    <ul>
+        <li><strong>get()</strong>: Returns the value associated with a given key.</li>
+        <li><strong>keys()</strong>: Returns a list of all the keys in the dictionary.</li>
+        <li><strong>values()</strong>: Returns a list of all the values in the dictionary.</li>
+        <li><strong>pop()</strong>: Removes and returns the value for a given key.</li>
+    </ul>
+    Dictionaries are perfect for scenarios where you need to access elements via a specific key quickly, like user data, settings, or configurations.
+</p>
+
+<h2 class="section-heading" id="methods-overview">
+    <span>5. Methods Overview</span>
+</h2>
+<p class="description">
+    Each data structure in Python comes with a set of methods to perform different actions. Let’s quickly summarize the methods for each data structure:
+    <br><br>
+    - **Lists**: 
+        - Methods like `append()`, `remove()`, and `sort()` provide flexibility to modify and manipulate the list.
+        - Lists are best when the collection of data needs to be changed frequently.
+    <br><br>
+    - **Tuples**: 
+        - Methods like `count()` and `index()` allow for querying the contents of a tuple.
+        - Tuples should be used when you have fixed data that should not change.
+    <br><br>
+    - **Dictionaries**: 
+        - Methods like `get()`, `keys()`, and `pop()` allow for quick and efficient access and modification based on keys.
+        - Dictionaries are ideal for when data is associated with unique keys, providing constant-time lookup for values.
+</p>
+
+<h2 class="section-heading" id="example-code">
+    <span>6. Example Code</span>
+</h2>
+<p class="description">
+    Below are examples demonstrating how to use Lists, Tuples, and Dictionaries in Python:
+</p>
+
+<pre class="code-block">
+# Example 1: List Operations
+shopping_list = ["apple", "banana", "orange"]
+shopping_list.append("grapes")  # Add item to the end
+shopping_list.remove("banana")  # Remove item by value
+shopping_list.sort()  # Sort items alphabetically
+print(shopping_list)
+
+# Example 2: Tuple Operations
+coordinates = (10, 20, 30)
+print(coordinates.index(20))  # Find the index of a specific value
+print(coordinates.count(30))  # Count occurrences of a specific value
+
+# Example 3: Dictionary Operations
+student = {"name": "John", "age": 21, "grade": "A"}
+print(student.get("name"))  # Get value associated with key 'name'
+print(student.keys())  # Get all keys
+student.pop("grade")  # Remove key-value pair by key
+print(student)
+</pre>
+
+<h2 class="section-heading" id="real-world-scenarios">
+    <span>7. Real-World Scenarios</span>
+</h2>
+<p class="description">
+    Data structures are used in a wide range of real-world applications, and their proper usage can drastically improve efficiency and maintainability. Here are some scenarios where Lists, Tuples, and Dictionaries come in handy:
+    <br><br>
+    - **Lists**: 
+        - Used in applications where the collection of data needs to change frequently, such as managing a list of tasks in a to-do list app or tracking items in a shopping cart.
+    <br><br>
+    - **Tuples**: 
+        - Ideal for cases where you want to group related data that should remain constant, such as storing RGB color values, geographical coordinates, or configuration options.
+    <br><br>
+    - **Dictionaries**: 
+        - Extremely useful in applications where fast lookup of data based on unique keys is required, such as storing user information with a user ID as the key, or managing inventory with item IDs as keys.
+</p>
+
+<ul class="resource-list">
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists" target="_blank" rel="noopener">Python Lists</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank" rel="noopener">Python Tuples</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries" target="_blank" rel="noopener">Python Dictionaries</a></li>
+    <li><a href="https://docs.python.org/3/library/stdtypes.html#types-mapping" target="_blank" rel="noopener">Dictionary Methods</a></li>
+</ul>

@@ -1,0 +1,158 @@
+<h2 class="section-heading" id="file-handling">
+    <span>1. File Handling</span>
+</h2>
+<p class="description">
+    File handling in Python is the process of interacting with files stored on a computer or in a networked environment. Python provides powerful tools for reading from and writing to text files, binary files, and more, making it an essential skill for data manipulation, configuration management, and storing persistent data.
+    <br><br>
+    In Python, file handling involves using built-in functions to open files, read from or write to them, and close them when finished. The `open()` function is used to interact with files, while file operations like reading, writing, appending, and deleting are performed using file methods.
+    <br><br>
+    Python provides a straightforward approach to file handling with high-level abstractions, which makes it easy to handle text and binary files. Whether working with large datasets, log files, or simple configurations, Python's file handling capabilities simplify these tasks.
+</p>
+
+<h2 class="section-heading" id="opening-files">
+    <span>2. Opening Files</span>
+</h2>
+<p class="description">
+    Before performing any operation on a file, you need to open it using the `open()` function. This function returns a file object that provides methods and attributes for reading, writing, and manipulating the file.
+    <br><br>
+    The `open()` function requires two parameters:
+    <ul>
+        <li><strong>filename</strong>: The path of the file you want to open.</li>
+        <li><strong>mode</strong>: The mode in which the file is opened (e.g., reading, writing, appending). Common modes include:
+            <ul>
+                <li><strong>'r'</strong>: Read mode (default). Opens the file for reading.</li>
+                <li><strong>'w'</strong>: Write mode. Opens the file for writing (overwrites the file if it exists).</li>
+                <li><strong>'a'</strong>: Append mode. Opens the file for writing (appends data to the end).</li>
+                <li><strong>'b'</strong>: Binary mode. For working with binary files.</li>
+                <li><strong>'x'</strong>: Exclusive creation mode. Creates a new file, but fails if the file already exists.</li>
+            </ul>
+        </li>
+    </ul>
+    Example of opening a file in read mode:
+    <pre class="code-block">
+    file = open("example.txt", "r")
+    </pre>
+    It is good practice to close the file after performing file operations to free up system resources.
+</p>
+
+<h2 class="section-heading" id="reading-files">
+    <span>3. Reading Files</span>
+</h2>
+<p class="description">
+    Once a file is opened in read mode (`'r'`), you can read its contents using various file methods. The most commonly used methods for reading are:
+    <ul>
+        <li><strong>read()</strong>: Reads the entire contents of the file as a string.</li>
+        <li><strong>readline()</strong>: Reads the next line of the file.</li>
+        <li><strong>readlines()</strong>: Reads all lines of the file and returns them as a list of strings.</li>
+    </ul>
+    Example:
+    <pre class="code-block">
+    file = open("example.txt", "r")
+    content = file.read()  # Read all content
+    print(content)
+    file.close()
+    </pre>
+    You should always close the file after reading from it to ensure the file pointer is released and system resources are properly freed.
+</p>
+
+<h2 class="section-heading" id="writing-files">
+    <span>4. Writing Files</span>
+</h2>
+<p class="description">
+    To write to a file, you can open the file in write mode (`'w'`) or append mode (`'a'`). Write mode will overwrite the file, while append mode will add data at the end without removing existing content.
+    <br><br>
+    The common methods for writing to a file are:
+    <ul>
+        <li><strong>write()</strong>: Writes a string to the file. If the file is opened in write mode, it will overwrite any existing content.</li>
+        <li><strong>writelines()</strong>: Writes a list of strings to the file.</li>
+    </ul>
+    Example:
+    <pre class="code-block">
+    file = open("example.txt", "w")
+    file.write("Hello, World!\n")
+    file.write("Welcome to file handling in Python.")
+    file.close()
+    </pre>
+    If you wish to avoid overwriting the existing content, you can open the file in append mode (`'a'`), which adds data to the end of the file.
+</p>
+
+<h2 class="section-heading" id="appending-files">
+    <span>5. Appending to Files</span>
+</h2>
+<p class="description">
+    If you need to add data to an existing file without removing the existing content, you can open the file in append mode (`'a'`). This mode allows you to write new data at the end of the file.
+    <br><br>
+    Example:
+    <pre class="code-block">
+    file = open("example.txt", "a")
+    file.write("\nThis is an additional line added to the file.")
+    file.close()
+    </pre>
+    The advantage of appending to a file is that it does not overwrite the existing data, which is useful in scenarios like logging, where you want to add new entries without erasing previous logs.
+</p>
+
+<h2 class="section-heading" id="closing-files">
+    <span>6. Closing Files</span>
+</h2>
+<p class="description">
+    After completing file operations, it is important to close the file using the `close()` method. Closing a file ensures that all data is properly written to disk and frees up system resources.
+    <br><br>
+    Example:
+    <pre class="code-block">
+    file = open("example.txt", "r")
+    content = file.read()
+    print(content)
+    file.close()  # Always close the file after using it
+    </pre>
+    Failing to close a file can lead to data loss or memory leaks, especially when handling large files.
+</p>
+
+<h2 class="section-heading" id="example-code">
+    <span>7. Example Code</span>
+</h2>
+<p class="description">
+    Below is an example demonstrating reading from, writing to, and appending to a text file:
+</p>
+
+<pre class="code-block">
+# Example: File Handling Operations
+# Reading a file
+file = open("example.txt", "r")
+content = file.read()
+print("File content:\n", content)
+file.close()
+
+# Writing to a file (overwrites existing content)
+file = open("example.txt", "w")
+file.write("This is a new file content.\n")
+file.close()
+
+# Appending to a file
+file = open("example.txt", "a")
+file.write("This line is added to the file.\n")
+file.close()
+</pre>
+
+<h2 class="section-heading" id="real-world-scenarios">
+    <span>8. Real-World Scenarios</span>
+</h2>
+<p class="description">
+    File handling is widely used in many real-world applications:
+    <br><br>
+    - **Log Management**: Storing logs in text files for debugging or tracking system events.
+    <br>
+    - **Configuration Files**: Reading and writing configuration settings for applications.
+    <br>
+    - **Data Processing**: Reading large datasets from CSV, JSON, or XML files and processing them.
+    <br>
+    - **Backup and Restore**: Writing backup copies of important files to ensure data recovery in case of failure.
+    <br>
+    - **Web Scraping**: Saving data scraped from the web into files for later analysis.
+</p>
+
+<ul class="resource-list">
+    <li><a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files" target="_blank" rel="noopener">Reading and Writing Files - Python Docs</a></li>
+    <li><a href="https://realpython.com/working-with-files-in-python/" target="_blank" rel="noopener">Real Python - Working with Files in Python</a></li>
+    <li><a href="https://docs.python.org/3/library/io.html" target="_blank" rel="noopener">Python IO Library Documentation</a></li>
+    <li><a href="https://www.geeksforgeeks.org/file-handling-python/" target="_blank" rel="noopener">GeeksforGeeks - File Handling in Python</a></li>
+</ul>

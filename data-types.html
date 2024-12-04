@@ -1,0 +1,198 @@
+<h2 class="section-heading" id="variables-and-data-types">
+    <span>1. Variables and Data Types</span>
+</h2>
+<p class="description">
+    In Python, variables are used to store data values. A variable is essentially a container for data, and each variable is associated with a data type that defines the kind of data it holds. Understanding Python's data types is crucial for performing basic operations and ensuring that the code functions as expected.
+    <br><br>
+    Python has several built-in data types that allow you to work with different kinds of data. The most commonly used data types are <strong>Numbers</strong>, <strong>Strings</strong>, and <strong>Lists</strong>, but Python also provides other data types such as <strong>Booleans</strong>, <strong>Tuples</strong>, <strong>Sets</strong>, and <strong>Dictionaries</strong>.
+</p>
+
+<h2 class="section-heading" id="numbers">
+    <span>2. Numbers (Integers and Floats)</span>
+</h3>
+<p class="description">
+    Python has two types of numeric data types: <strong>Integers</strong> and <strong>Floats</strong>.
+    <br><br>
+    <strong>Integers</strong> are whole numbers (positive or negative) without a decimal point. Examples include numbers like 5, -3, 100, and 0. Integers are used for counting, indexing, or for performing mathematical calculations that require whole numbers.
+    <br><br>
+    <strong>Floats</strong> are numbers that contain a decimal point. Examples include numbers like 5.5, -0.98, 3.14. Floats are used when precise calculations are needed, such as in measurements or divisions that result in non-whole numbers.
+    <br><br>
+    Python can automatically detect whether a number is an integer or a float based on the syntax.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Integer
+a = 5
+
+# Float
+b = 3.14
+
+print(type(a))  # Output: <class 'int'>
+print(type(b))  # Output: <class 'float'>
+    </pre>
+</p>
+
+<h2 class="section-heading" id="strings">
+    <span>3. Strings</span>
+</h3>
+<p class="description">
+    A <strong>String</strong> is a sequence of characters enclosed in single or double quotes. Strings in Python are used to store text data. They are one of the most commonly used data types in Python because they represent textual data in programs.
+    <br><br>
+    Strings can contain letters, numbers, and symbols. Python also supports multi-line strings using triple quotes (either `"""` or `'''`).
+    <br><br>
+    Example:
+    <pre class="code-block">
+# String with single quotes
+name = 'John'
+
+# String with double quotes
+greeting = "Hello, world!"
+
+print(type(name))  # Output: <class 'str'>
+print(type(greeting))  # Output: <class 'str'>
+    </pre>
+    You can perform operations on strings, such as concatenation (joining strings together) and slicing (accessing parts of the string).
+    <br><br>
+    Example:
+    <pre class="code-block">
+# String concatenation
+full_name = name + " Doe"
+print(full_name)  # Output: John Doe
+
+# String slicing
+print(greeting[0:5])  # Output: Hello
+    </pre>
+</p>
+
+<h2 class="section-heading" id="lists">
+    <span>4. Lists</span>
+</h3>
+<p class="description">
+    A <strong>List</strong> is an ordered collection of items enclosed in square brackets. Lists can store multiple items in a single variable, and the items in a list can be of different data types. Lists are mutable, meaning their content can be changed after creation, which makes them highly flexible for various applications.
+    <br><br>
+    Lists can be used to store collections of similar or different types of data, and you can modify them by adding, removing, or changing elements.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# List with different data types
+my_list = [1, "apple", 3.14, True]
+
+print(type(my_list))  # Output: <class 'list'>
+print(my_list[1])  # Output: apple
+    </pre>
+    Example of manipulating lists:
+    <pre class="code-block">
+# Add an item to the list
+my_list.append("banana")
+
+# Remove an item from the list
+my_list.remove(3.14)
+
+print(my_list)  # Output: [1, 'apple', True, 'banana']
+    </pre>
+</p>
+
+<h2 class="section-heading" id="tuples">
+    <span>5. Tuples</span>
+</h3>
+<p class="description">
+    A <strong>Tuple</strong> is similar to a list, but unlike lists, tuples are <strong>immutable</strong>, meaning that once a tuple is created, its elements cannot be changed, added, or removed.
+    <br><br>
+    Tuples are used when you need to store a collection of data but don’t want that data to be modified after its creation. They are often used in cases where a fixed collection of items is required.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Tuple with different data types
+my_tuple = (1, "apple", 3.14, True)
+
+print(type(my_tuple))  # Output: <class 'tuple'>
+    </pre>
+</p>
+
+<h2 class="section-heading" id="booleans">
+    <span>6. Booleans</span>
+</h3>
+<p class="description">
+    The <strong>Boolean</strong> data type is used to represent one of two values: <strong>True</strong> or <strong>False</strong>. It is often used in conditional statements or loops to check if a condition is met.
+    <br><br>
+    Booleans are used in comparisons and logical operations. They are essential for controlling program flow, such as whether to execute certain blocks of code based on a condition.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Boolean values
+is_python_fun = True
+is_raining = False
+
+print(type(is_python_fun))  # Output: <class 'bool'>
+    </pre>
+</p>
+
+<h2 class="section-heading" id="sets">
+    <span>7. Sets</span>
+</h3>
+<p class="description">
+    A <strong>Set</strong> is an unordered collection of unique elements. Sets are useful when you want to store data without duplicates. Sets are also mutable, so you can add or remove items after the set is created.
+    <br><br>
+    One key feature of sets is that they automatically eliminate duplicate elements. If you try to add an element that is already in the set, it will not be added.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Set with unique elements
+my_set = {1, 2, 3, 4, 5}
+
+print(type(my_set))  # Output: <class 'set'>
+print(my_set)  # Output: {1, 2, 3, 4, 5}
+    </pre>
+    Example of eliminating duplicates:
+    <pre class="code-block">
+# Adding duplicate elements
+my_set.add(3)
+print(my_set)  # Output: {1, 2, 3, 4, 5} (No duplicates)
+    </pre>
+</p>
+
+<h2 class="section-heading" id="dictionaries">
+    <span>8. Dictionaries</span>
+</h3>
+<p class="description">
+    A <strong>Dictionary</strong> is an unordered collection of key-value pairs. Each key must be unique, and each key is associated with a value. Dictionaries are used to store data in a way that allows quick access to values using the corresponding keys.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Dictionary with key-value pairs
+my_dict = {"name": "John", "age": 25, "city": "New York"}
+
+print(type(my_dict))  # Output: <class 'dict'>
+print(my_dict["name"])  # Output: John
+    </pre>
+    Dictionaries are useful when you need to store data that has a logical relationship, such as person’s information or mapping items to their prices.
+</p>
+
+<h2 class="section-heading" id="casting">
+    <span>9. Type Casting</span>
+</h3>
+<p class="description">
+    <strong>Type Casting</strong> allows you to convert one data type to another. For example, you can convert a string to an integer or a float to an integer using Python's built-in functions. Type casting is useful when you need to ensure that variables are of the correct type for certain operations.
+    <br><br>
+    Example:
+    <pre class="code-block">
+# Converting a string to an integer
+num_str = "10"
+num_int = int(num_str)
+print(type(num_int))  # Output: <class 'int'>
+
+# Converting a float to an integer
+float_num = 3.14
+int_num = int(float_num)
+print(int_num)  # Output: 3
+    </pre>
+</p>
+
+<ul class="resource-list">
+    <li><a href="https://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator" target="_blank" rel="noopener">Python Numbers</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/introduction.html#strings" target="_blank" rel="noopener">Python Strings</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists" target="_blank" rel="noopener">Python Lists</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences" target="_blank" rel="noopener">Python Tuples</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#sets" target="_blank" rel="noopener">Python Sets</a></li>
+    <li><a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries" target="_blank" rel="noopener">Python Dictionaries</a></li>
+</ul>

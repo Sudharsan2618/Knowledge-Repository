@@ -1,0 +1,132 @@
+/* Content Section */
+.content-section {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Preformatted Code Block */
+.code-block {
+    background-color: #2e2e2e;
+    color: #f1f1f1;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: auto;
+}
+
+/* Section Headings */
+h2.section-heading {
+    font-size: 24px;
+    color: #333;
+    margin-top: 30px;
+    border-bottom: 2px solid #0073e6;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Descriptions */
+p.description {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Resource List Styles */
+ul.resource-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul.resource-list li {
+    margin-bottom: 10px;
+}
+
+ul.resource-list li a {
+    font-size: 16px;
+    color: #0073e6;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+ul.resource-list li a:hover {
+    color: #005bb5;
+}
+
+/* Image Container */
+.image-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-caption {
+    font-size: 14px;
+    color: #888;
+    margin-top: 10px;
+}
+
+/* Links Styling */
+a {
+    color: #0073e6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    .content-section {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h2.section-heading {
+        font-size: 22px;
+    }
+
+    .code-block {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    p.description {
+        font-size: 16px;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 20px;
+    }
+
+    strong {
+        font-weight: 700;
+        color: #0073e6;  /* Blue color for emphasis */
+        font-size: 18px;
+        margin-right: 5px;
+        display: inline;
+    }
+
+    p.description strong {
+        background-color: #f4f4f9;
+        padding: 0 5px;
+        border-radius: 4px;
+    }
+
+    ul.resource-list li a {
+        font-size: 14px;
+    }
+}

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Learn Basic Python Programming</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="iframe.css">
 </head>
 
 <body>
@@ -16,9 +17,9 @@
             </div>
             <nav>
                 <ul>
-                    <li><a href="#tutorial" onclick="loadContent('python-tutorial.html')">Python Basics</a></li>
-                    <li><a href="#interview-questions" onclick="loadContent('interview.html')">Interview Questions</a></li>
-                    <li><a href="#test" onclick="loadContent('test.html')">Python Test</a></li>
+                    <li><a href="#tutorial" onclick="showNavContent('tutorial')">Python Basics</a></li>
+                    <li><a href="#interview-questions" onclick="showNavContent('interview')">Interview Questions</a></li>
+                    <li><a href="#test" onclick="showNavContent('test')">Python Test</a></li>
                 </ul>
             </nav>
             <button id="theme-toggle">Toggle Theme</button>
@@ -27,30 +28,34 @@
 
     <div id="container">
         <aside id="left-nav">
+            <!-- Python Basics Nav Content -->
             <div id="tutorial-nav" class="nav-content">
                 <ul>
-                    <li><a href="#python-tutorial" onclick="loadContent('python-tutorial.html')">Python Tutorial | Learn Python Programming Language</a></li>
-                    <li><a href="#python-getting-started" onclick="loadContent('python-getting-started.html')">Getting Started with Python Programming</a></li>
-                    <li><a href="#input-output" onclick="loadContent('input-output.html')">Input and Output in Python</a></li>
-                    <li><a href="#data-types" onclick="loadContent('data-types.html')">Python Data Types</a></li>
-                    <li><a href="#operators" onclick="loadContent('operators.html')">Python Operators</a></li>
-                    <li><a href="#conditional-statements" onclick="loadContent('conditional-statements.html')">Conditional Statements in Python</a></li>
-                    <li><a href="#loops" onclick="loadContent('loops.html')">Loops in Python - For, While and Nested Loops</a></li>
-                    <li><a href="#functions" onclick="loadContent('functions.html')">Python Functions</a></li>
-                    <li><a href="#oops-concepts" onclick="loadContent('oops-concepts.html')">Python OOPs Concepts</a></li>
-                    <li><a href="#modules" onclick="loadContent('modules.html')">Python Modules</a></li>
-                    <li><a href="#exception-handling" onclick="loadContent('exception-handling.html')">Python Exception Handling</a></li>
-                    <li><a href="#packages" onclick="loadContent('packages.html')">Python Packages</a></li>
-                    <li><a href="#collections-module" onclick="loadContent('collections-module.html')">Python Collections Module</a></li>
-                    <li><a href="#projects" onclick="loadContent('projects.html')">Python Projects - Beginner to Advanced</a></li>                    
+                    <li><a href="#python-getting-started" onclick="loadContent('python-getting-started.html')">Getting Started</a></li>
+                    <li><a href="#data-types" onclick="loadContent('data-types.html')">Variables and Data Types</a></li>
+                    <li><a href="#conditional-statements" onclick="loadContent('conditional-statements.html')">Control Flow</a></li>
+                    <li><a href="#loops" onclick="loadContent('loops.html')">Loops</a></li>
+                    <li><a href="#functions" onclick="loadContent('functions.html')">Functions</a></li>
+                    <li><a href="#oops-concepts" onclick="loadContent('oops-concepts.html')">Object-Oriented Programming (OOP)</a></li>
+                    <li><a href="#modules" onclick="loadContent('modules.html')">Data Structures</a></li>
+                    <li><a href="#input-output" onclick="loadContent('input-output.html')">File Handling</a></li>
+                    <li><a href="#exception-handling" onclick="loadContent('exception-handling.html')">Exception Handling</a></li>
+                    <li><a href="#packages" onclick="loadContent('packages.html')">Libraries & Frameworks</a></li>
+                    <li><a href="#flask" onclick="loadContent('flask.html')">Flask</a></li>
+                    <li><a href="#projects" onclick="loadContent('projects.html')">Testing</a></li>
+                    <li><a href="#deployment" onclick="loadContent('deployment.html')">Deployment</a></li>                    
                 </ul>
             </div>
+
+            <!-- Interview Questions Nav Content -->
             <div id="interview-nav" class="nav-content" style="display:none;">
                 <ul>
                     <li><a href="#basic-questions" onclick="loadContent('basic-questions.html')">Basic Questions</a></li>
                     <li><a href="#advanced-questions" onclick="loadContent('advanced-questions.html')">Advanced Questions</a></li>
                 </ul>
             </div>
+
+            <!-- Python Test Nav Content -->
             <div id="test-nav" class="nav-content" style="display:none;">
                 <ul>
                     <li><a href="#mcq" onclick="loadContent('mcq.html')">Multiple Choice Questions</a></li>
@@ -68,7 +73,7 @@
         <p>Social Media Links</p>
     </footer>
 
-    <script src="   main.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

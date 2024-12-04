@@ -25,5 +25,27 @@ function loadContent(page) {
 
 // Load the default content (python-tutorial.html) when the page loads
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('python-tutorial.html');
+    loadContent('python-getting-started.html');
 });
+
+// Function to show content based on selected navigation item
+function showNavContent(type) {
+    // Hide all sections
+    document.getElementById("tutorial-nav").style.display = 'none';
+    document.getElementById("interview-nav").style.display = 'none';
+    document.getElementById("test-nav").style.display = 'none';
+    
+    // Show the selected section
+    if (type === 'tutorial') {
+        document.getElementById("tutorial-nav").style.display = 'block';
+    } else if (type === 'interview') {
+        document.getElementById("interview-nav").style.display = 'block';
+    } else if (type === 'test') {
+        document.getElementById("test-nav").style.display = 'block';
+    }
+}
+
+// Default load tutorial content on page load
+window.onload = function() {
+    showNavContent('tutorial');
+}

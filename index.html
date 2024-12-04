@@ -7,6 +7,7 @@
     <title>Learn Basic Python Programming</title>
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="iframe.css">
+    <link rel="stylesheet" href="chatbot.css">
 </head>
 
 <body>
@@ -31,8 +32,8 @@
             <!-- Python Basics Nav Content -->
             <div id="tutorial-nav" class="nav-content">
                 <ul>
-                    <li><a href="#python-getting-started" onclick="loadContent('python-getting-started.html')">Getting Started</a></li>
-                    <li><a href="#data-types" onclick="loadContent('data-types.html')">Variables and Data Types</a></li>
+                    <li><a href="#python-getting-started" onclick="loadContent('/python-getting-started.html')">Getting Started</a></li>
+                    <li><a href="#data-types" onclick="loadContent('/data-types.html')">Variables and Data Types</a></li>
                     <li><a href="#conditional-statements" onclick="loadContent('conditional-statements.html')">Control Flow</a></li>
                     <li><a href="#loops" onclick="loadContent('loops.html')">Loops</a></li>
                     <li><a href="#functions" onclick="loadContent('functions.html')">Functions</a></li>
@@ -69,11 +70,39 @@
         </main>
     </div>
 
+        <!-- Chatbot Icon and Popup -->
+        <div id="chatbot-icon" onclick="toggleChatbot()">
+            <img src="https://cdn-icons-png.flaticon.com/512/3048/3048122.png" alt="Chatbot Icon" />
+        </div>
+        <div id="chatbot-popup">
+            <div class="chatbot-header">
+                <span>Chat with san bot</span>
+                <button onclick="toggleChatbot()">X</button>
+            </div>
+            <div class="chatbot-content">
+                <!-- Responses display here -->
+                <div id="response-container"></div>               
+                <!-- Input bar at the bottom -->
+            </div>
+            <div class="input-bar">
+                <input type="file" id="file-upload" name="file" style="display: none;" />
+                <button id="file-upload-button" onclick="document.getElementById('file-upload').click()">📁</button>
+                <input type="text" id="question" placeholder="Ask your question here" required />
+                <button id="send-query">Send</button>
+            </div>
+             <!-- Loading Spinner Overlay -->
+            <div id="loading-overlay" style="display: none;">
+                <div class="spinner"></div>
+            </div>
+        </div>
+        <div id="overlay"></div>
+
     <footer>
         <p>Social Media Links</p>
     </footer>
 
     <script src="main.js"></script>
+    <script src="chatbot.js"></script>    
 </body>
 
 </html>

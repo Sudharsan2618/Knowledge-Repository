@@ -13,7 +13,8 @@ function showNav(navId) {
 
 // Save the current page to localStorage when a navigation link is clicked
 function loadContent(page) {
-    const mainContent = document.getElementById("main-content");
+    stopReading(); 
+    const mainContent = document.getElementById("content");
     fetch(page)
         .then(response => response.text())
         .then(html => {

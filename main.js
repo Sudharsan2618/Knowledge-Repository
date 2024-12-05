@@ -11,31 +11,33 @@ function showNav(navId) {
 }
 
 
+// Save the current page to localStorage when a navigation link is clicked
 function loadContent(page) {
     const mainContent = document.getElementById("main-content");
     fetch(page)
         .then(response => response.text())
         .then(html => {
             mainContent.innerHTML = html;
+            // Save the page path in localStorage
+            localStorage.setItem('lastVisitedPage', page);
         })
         .catch(error => {
             mainContent.innerHTML = `<p>Error loading content: ${error}</p>`;
         });
 }
 
-// Load the default content (python-tutorial.html) when the page loads
+// Load the last visited page or default content on page load
 document.addEventListener('DOMContentLoaded', function() {
-    loadContent('python-getting-started.html');
+    const lastPage = localStorage.getItem('lastVisitedPage') || 'python-getting-started.html';
+    loadContent(lastPage);
 });
 
-// Function to show content based on selected navigation item
+// Function to show the selected navigation section
 function showNavContent(type) {
-    // Hide all sections
     document.getElementById("tutorial-nav").style.display = 'none';
     document.getElementById("interview-nav").style.display = 'none';
     document.getElementById("test-nav").style.display = 'none';
-    
-    // Show the selected section
+
     if (type === 'tutorial') {
         document.getElementById("tutorial-nav").style.display = 'block';
     } else if (type === 'interview') {
@@ -43,9 +45,14 @@ function showNavContent(type) {
     } else if (type === 'test') {
         document.getElementById("test-nav").style.display = 'block';
     }
+
+    // Save the navigation type in localStorage
+    localStorage.setItem('lastNavType', type);
 }
 
-// Default load tutorial content on page load
+
+// Load the last navigation section on page load
 window.onload = function() {
-    showNavContent('tutorial');
-}
+    const lastNavType = localStorage.getItem('lastNavType') || 'tutorial';
+    showNavContent(lastNavType);
+};

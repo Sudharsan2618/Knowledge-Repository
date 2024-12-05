@@ -1,0 +1,679 @@
+<section class="question">
+    <h2>Question 1: What will be the output of the following code?</h2>
+    <pre><code>print("Hello, " + "World!")</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="a"> Hello, World!
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> Hello,World!
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> Error: Unsupported operation
+            </label>
+            <label>
+                <input type="radio" name="q1" value="d"> Hello, World
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q1', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q1" style="display:none;">
+        <p class="correct">Correct! The output is "Hello, World!" because string concatenation combines the two strings.</p>
+        <p class="incorrect">Incorrect. The correct answer is "Hello, World!" because the '+' operator is used for string concatenation.</p>
+        <button onclick="toggleExplanation('explanation-q1', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q1" style="display:none;">
+            <p>Explanation: In Python, you can concatenate two strings using the "+" operator. The expression <code>"Hello, " + "World!"</code> results in <code>"Hello, World!"</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q1')">💡</div>
+    <div class="tip" id="tip-q1" style="display:none;">
+        <p>Tip: String concatenation can be done using the "+" operator in Python.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 2: What will the following code print?</h2>
+    <pre><code>print(5 // 2)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q2" value="a"> 2.5
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> 2
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> 3
+            </label>
+            <label>
+                <input type="radio" name="q2" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q2', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q2" style="display:none;">
+        <p class="correct">Correct! The output is 2 because // performs floor division, which rounds the result down to the nearest integer.</p>
+        <p class="incorrect">Incorrect. The correct answer is 2 because // performs floor division.</p>
+        <button onclick="toggleExplanation('explanation-q2', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q2" style="display:none;">
+            <p>Explanation: In Python, <code>//</code> is the floor division operator, which returns the largest integer less than or equal to the result.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q2')">💡</div>
+    <div class="tip" id="tip-q2" style="display:none;">
+        <p>Tip: Use <code>//</code> for floor division to round down the result to the nearest integer.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 3: What is the result of the following code?</h2>
+    <pre><code>print(type([]))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="a"> <class 'list'>
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> <class 'tuple'>
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> <class 'dict'>
+            </label>
+            <label>
+                <input type="radio" name="q3" value="d"> <class 'set'>
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q3', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q3" style="display:none;">
+        <p class="correct">Correct! The type of an empty list is <code>list</code>.</p>
+        <p class="incorrect">Incorrect. The correct answer is <code>list</code>, as <code>[]</code> creates an empty list.</p>
+        <button onclick="toggleExplanation('explanation-q3', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q3" style="display:none;">
+            <p>Explanation: In Python, <code>[]</code> denotes an empty list, and <code>type([])</code> returns <code><class 'list'></code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q3')">💡</div>
+    <div class="tip" id="tip-q3" style="display:none;">
+        <p>Tip: Use <code>type()</code> to check the data type of a variable.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 4: What is the output of this code?</h2>
+    <pre><code>print(len("Python"))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q4" value="a"> 6
+            </label>
+            <label>
+                <input type="radio" name="q4" value="b"> 7
+            </label>
+            <label>
+                <input type="radio" name="q4" value="c"> 5
+            </label>
+            <label>
+                <input type="radio" name="q4" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q4', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q4" style="display:none;">
+        <p class="correct">Correct! The length of the string "Python" is 6.</p>
+        <p class="incorrect">Incorrect. The correct answer is 6, as "Python" has 6 characters.</p>
+        <button onclick="toggleExplanation('explanation-q4', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q4" style="display:none;">
+            <p>Explanation: In Python, the <code>len()</code> function returns the number of characters in a string, and "Python" has 6 characters.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q4')">💡</div>
+    <div class="tip" id="tip-q4" style="display:none;">
+        <p>Tip: Use <code>len()</code> to get the length of sequences like strings, lists, and tuples.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 5: What will this code output?</h2>
+    <pre><code>print(3 ** 2)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q5" value="a"> 9
+            </label>
+            <label>
+                <input type="radio" name="q5" value="b"> 6
+            </label>
+            <label>
+                <input type="radio" name="q5" value="c"> 5
+            </label>
+            <label>
+                <input type="radio" name="q5" value="d"> 8
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q5', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q5" style="display:none;">
+        <p class="correct">Correct! The output is 9 because 3 raised to the power of 2 is 9.</p>
+        <p class="incorrect">Incorrect. The correct answer is 9, as <code>3 ** 2</code> computes 3 raised to the power of 2.</p>
+        <button onclick="toggleExplanation('explanation-q5', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q5" style="display:none;">
+            <p>Explanation: In Python, <code>**</code> is the exponentiation operator, which calculates the result of raising the base to the exponent. So <code>3 ** 2</code> equals 9.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q5')">💡</div>
+    <div class="tip" id="tip-q5" style="display:none;">
+        <p>Tip: Use <code>**</code> for exponentiation in Python.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 6: What will this code output?</h2>
+    <pre><code>print("123"[1])</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q6" value="a"> 1
+            </label>
+            <label>
+                <input type="radio" name="q6" value="b"> 2
+            </label>
+            <label>
+                <input type="radio" name="q6" value="c"> 3
+            </label>
+            <label>
+                <input type="radio" name="q6" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q6', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q6" style="display:none;">
+        <p class="correct">Correct! The output is 2, as index 1 refers to the second character in the string "123".</p>
+        <p class="incorrect">Incorrect. The correct answer is 2 because indexing starts at 0, so index 1 corresponds to the second character.</p>
+        <button onclick="toggleExplanation('explanation-q6', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q6" style="display:none;">
+            <p>Explanation: In Python, string indexing starts at 0. So <code>"123"[1]</code> accesses the second character, which is "2".</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q6')">💡</div>
+    <div class="tip" id="tip-q6" style="display:none;">
+        <p>Tip: Remember that string indices start at 0 in Python.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 7: What is the output of the following code?</h2>
+    <pre><code>print("a" in "apple")</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q7" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q7" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q7" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q7" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q7', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q7" style="display:none;">
+        <p class="correct">Correct! The output is True because "a" is present in the string "apple".</p>
+        <p class="incorrect">Incorrect. The correct answer is True because the <code>in</code> operator checks if a substring exists in a string.</p>
+        <button onclick="toggleExplanation('explanation-q7', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q7" style="display:none;">
+            <p>Explanation: The <code>in</code> operator checks for membership. In this case, <code>"a"</code> is present in the string "apple", so the result is True.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q7')">💡</div>
+    <div class="tip" id="tip-q7" style="display:none;">
+        <p>Tip: Use the <code>in</code> operator to check if a value is part of a sequence like strings, lists, etc.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 8: What will this code output?</h2>
+    <pre><code>print("Hello".lower())</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q8" value="a"> hello
+            </label>
+            <label>
+                <input type="radio" name="q8" value="b"> Hello
+            </label>
+            <label>
+                <input type="radio" name="q8" value="c"> ERROR
+            </label>
+            <label>
+                <input type="radio" name="q8" value="d"> hEllo
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q8', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q8" style="display:none;">
+        <p class="correct">Correct! The output is "hello", as the <code>lower()</code> method converts all characters to lowercase.</p>
+        <p class="incorrect">Incorrect. The correct answer is "hello". The <code>lower()</code> method returns a string with all characters in lowercase.</p>
+        <button onclick="toggleExplanation('explanation-q8', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q8" style="display:none;">
+            <p>Explanation: In Python, the <code>lower()</code> method converts all characters in a string to lowercase.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q8')">💡</div>
+    <div class="tip" id="tip-q8" style="display:none;">
+        <p>Tip: Use <code>lower()</code> to convert a string to lowercase.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 9: What is the output of this code?</h2>
+    <pre><code>print(4 == 4.0)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q9" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q9" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q9" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q9" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q9', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q9" style="display:none;">
+        <p class="correct">Correct! The output is True, as both 4 and 4.0 are considered equal in Python.</p>
+        <p class="incorrect">Incorrect. The correct answer is True because Python automatically converts between integer and float types for comparison.</p>
+        <button onclick="toggleExplanation('explanation-q9', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q9" style="display:none;">
+            <p>Explanation: In Python, 4 and 4.0 are considered equal because the integer 4 and the floating-point number 4.0 are treated as equivalent in comparison.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q9')">💡</div>
+    <div class="tip" id="tip-q9" style="display:none;">
+        <p>Tip: Python compares integers and floating-point numbers by value, not by type.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 10: What will this code output?</h2>
+    <pre><code>print(bool(0))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q10" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q10" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q10" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q10" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q10', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q10" style="display:none;">
+        <p class="correct">Correct! The output is False, as the bool() function returns False for the value 0.</p>
+        <p class="incorrect">Incorrect. The correct answer is False because 0 is considered False in Python when converted to a boolean.</p>
+        <button onclick="toggleExplanation('explanation-q10', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q10" style="display:none;">
+            <p>Explanation: In Python, the <code>bool()</code> function returns False for values such as 0, None, and empty sequences.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q10')">💡</div>
+    <div class="tip" id="tip-q10" style="display:none;">
+        <p>Tip: Use <code>bool()</code> to convert values to boolean, where 0, None, and empty sequences evaluate to False.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 11: What is the output of the following code?</h2>
+    <pre><code>print(3 != 4)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q11" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q11" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q11" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q11" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q11', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q11" style="display:none;">
+        <p class="correct">Correct! The output is True because 3 is not equal to 4.</p>
+        <p class="incorrect">Incorrect. The correct answer is True because the "!=" operator checks inequality.</p>
+        <button onclick="toggleExplanation('explanation-q11', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q11" style="display:none;">
+            <p>Explanation: The "!=" operator is used to check if two values are not equal. Since 3 is not equal to 4, the result is True.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q11')">💡</div>
+    <div class="tip" id="tip-q11" style="display:none;">
+        <p>Tip: Use the "!=" operator to check if two values are not equal.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 12: What will this code output?</h2>
+    <pre><code>print([1, 2, 3] + [4, 5])</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q12" value="a"> [1, 2, 3, 4, 5]
+            </label>
+            <label>
+                <input type="radio" name="q12" value="b"> [1, 2, 3] + [4, 5]
+            </label>
+            <label>
+                <input type="radio" name="q12" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q12" value="d"> [1, 2] + [3, 4, 5]
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q12', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q12" style="display:none;">
+        <p class="correct">Correct! The output is [1, 2, 3, 4, 5] because the "+" operator concatenates the two lists.</p>
+        <p class="incorrect">Incorrect. The correct answer is [1, 2, 3, 4, 5] because list concatenation is done using the "+" operator.</p>
+        <button onclick="toggleExplanation('explanation-q12', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q12" style="display:none;">
+            <p>Explanation: In Python, the "+" operator can be used to concatenate lists. So, <code>[1, 2, 3] + [4, 5]</code> results in the combined list <code>[1, 2, 3, 4, 5]</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q12')">💡</div>
+    <div class="tip" id="tip-q12" style="display:none;">
+        <p>Tip: Use the "+" operator to concatenate two lists in Python.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 13: What will the following code print?</h2>
+    <pre><code>print(len([1, 2, 3]))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q13" value="a"> 3
+            </label>
+            <label>
+                <input type="radio" name="q13" value="b"> 2
+            </label>
+            <label>
+                <input type="radio" name="q13" value="c"> 1
+            </label>
+            <label>
+                <input type="radio" name="q13" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q13', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q13" style="display:none;">
+        <p class="correct">Correct! The output is 3 because the list contains three elements.</p>
+        <p class="incorrect">Incorrect. The correct answer is 3 because <code>len([1, 2, 3])</code> returns the number of elements in the list.</p>
+        <button onclick="toggleExplanation('explanation-q13', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q13" style="display:none;">
+            <p>Explanation: The <code>len()</code> function returns the length of an iterable. For the list <code>[1, 2, 3]</code>, the length is 3.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q13')">💡</div>
+    <div class="tip" id="tip-q13" style="display:none;">
+        <p>Tip: Use the <code>len()</code> function to get the length of sequences such as lists, tuples, and strings.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 14: What is the output of the following code?</h2>
+    <pre><code>print("abc" * 3)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q14" value="a"> abcabcabc
+            </label>
+            <label>
+                <input type="radio" name="q14" value="b"> abc
+            </label>
+            <label>
+                <input type="radio" name="q14" value="c"> 3abc
+            </label>
+            <label>
+                <input type="radio" name="q14" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q14', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q14" style="display:none;">
+        <p class="correct">Correct! The output is "abcabcabc" because the "*" operator is used to repeat the string.</p>
+        <p class="incorrect">Incorrect. The correct answer is "abcabcabc" because the "*" operator repeats the string.</p>
+        <button onclick="toggleExplanation('explanation-q14', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q14" style="display:none;">
+            <p>Explanation: In Python, the "*" operator can be used to repeat a string multiple times. So <code>"abc" * 3</code> results in <code>"abcabcabc"</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q14')">💡</div>
+    <div class="tip" id="tip-q14" style="display:none;">
+        <p>Tip: You can use the "*" operator to repeat strings and lists in Python.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 15: What is the result of the following code?</h2>
+    <pre><code>print(5 == 5.0)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q15" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q15" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q15" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q15" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q15', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q15" style="display:none;">
+        <p class="correct">Correct! The output is True because 5 and 5.0 are considered equal in Python.</p>
+        <p class="incorrect">Incorrect. The correct answer is True because Python treats integers and floats as equal in comparison.</p>
+        <button onclick="toggleExplanation('explanation-q15', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q15" style="display:none;">
+            <p>Explanation: In Python, 5 (integer) and 5.0 (float) are considered equal when compared using the "==" operator.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q15')">💡</div>
+    <div class="tip" id="tip-q15" style="display:none;">
+        <p>Tip: Python compares numbers by value, so 5 and 5.0 are considered equal.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 16: What will be the output of this code?</h2>
+    <pre><code>print("hello" == "Hello")</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q16" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q16" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q16" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q16" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q16', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q16" style="display:none;">
+        <p class="correct">Correct! The output is False because "hello" and "Hello" have different cases.</p>
+        <p class="incorrect">Incorrect. The correct answer is False because string comparison in Python is case-sensitive.</p>
+        <button onclick="toggleExplanation('explanation-q16', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q16" style="display:none;">
+            <p>Explanation: In Python, string comparison is case-sensitive. Since "hello" is not equal to "Hello", the result is False.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q16')">💡</div>
+    <div class="tip" id="tip-q16" style="display:none;">
+        <p>Tip: Python compares strings character by character, including case.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 17: What will the following code print?</h2>
+    <pre><code>print(4 * [1, 2])</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q17" value="a"> [1, 2, 1, 2, 1, 2, 1, 2]
+            </label>
+            <label>
+                <input type="radio" name="q17" value="b"> [1, 2, 1, 2]
+            </label>
+            <label>
+                <input type="radio" name="q17" value="c"> [4, 4]
+            </label>
+            <label>
+                <input type="radio" name="q17" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q17', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q17" style="display:none;">
+        <p class="correct">Correct! The output is [1, 2, 1, 2, 1, 2, 1, 2] because the list is repeated 4 times.</p>
+        <p class="incorrect">Incorrect. The correct answer is [1, 2, 1, 2, 1, 2, 1, 2] because multiplying a list repeats its elements.</p>
+        <button onclick="toggleExplanation('explanation-q17', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q17" style="display:none;">
+            <p>Explanation: In Python, multiplying a list by an integer repeats its contents that many times. So <code>4 * [1, 2]</code> gives <code>[1, 2, 1, 2, 1, 2, 1, 2]</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q17')">💡</div>
+    <div class="tip" id="tip-q17" style="display:none;">
+        <p>Tip: Multiplying a list by an integer repeats its elements.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 18: What is the output of the following code?</h2>
+    <pre><code>print(10 / 2)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q18" value="a"> 5
+            </label>
+            <label>
+                <input type="radio" name="q18" value="b"> 5.0
+            </label>
+            <label>
+                <input type="radio" name="q18" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q18" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q18', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q18" style="display:none;">
+        <p class="correct">Correct! The output is 5.0 because division always returns a float in Python 3.</p>
+        <p class="incorrect">Incorrect. The correct answer is 5.0, as division in Python 3 always returns a float.</p>
+        <button onclick="toggleExplanation('explanation-q18', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q18" style="display:none;">
+            <p>Explanation: In Python 3, division always returns a float, even if the result is an integer. So <code>10 / 2</code> results in 5.0.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q18')">💡</div>
+    <div class="tip" id="tip-q18" style="display:none;">
+        <p>Tip: Division always returns a float in Python 3, even when the result is an integer.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 19: What will this code output?</h2>
+    <pre><code>print("2" * 3)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q19" value="a"> 6
+            </label>
+            <label>
+                <input type="radio" name="q19" value="b"> 222
+            </label>
+            <label>
+                <input type="radio" name="q19" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q19" value="d"> 23
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q19', 'b')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q19" style="display:none;">
+        <p class="correct">Correct! The output is "222" because the string "2" is repeated 3 times.</p>
+        <p class="incorrect">Incorrect. The correct answer is "222", as multiplying a string by an integer repeats it that many times.</p>
+        <button onclick="toggleExplanation('explanation-q19', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q19" style="display:none;">
+            <p>Explanation: In Python, multiplying a string by an integer repeats that string the specified number of times. So <code>"2" * 3</code> results in <code>"222"</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q19')">💡</div>
+    <div class="tip" id="tip-q19" style="display:none;">
+        <p>Tip: Multiplying a string by an integer repeats the string.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 20: What is the result of the following code?</h2>
+    <pre><code>print(1 + 2 == 3)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q20" value="a"> True
+            </label>
+            <label>
+                <input type="radio" name="q20" value="b"> False
+            </label>
+            <label>
+                <input type="radio" name="q20" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q20" value="d"> None
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q20', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q20" style="display:none;">
+        <p class="correct">Correct! The output is True because the expression is evaluated as (1 + 2) == 3, which is True.</p>
+        <p class="incorrect">Incorrect. The correct answer is True because the expression evaluates to 3 == 3.</p>
+        <button onclick="toggleExplanation('explanation-q20', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q20" style="display:none;">
+            <p>Explanation: In Python, the expression is evaluated as <code>1 + 2 == 3</code>. First, 1 + 2 is calculated, which equals 3, and then it is compared with 3, resulting in True.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q20')">💡</div>
+    <div class="tip" id="tip-q20" style="display:none;">
+        <p>Tip: Use parentheses to clarify order of operations when combining arithmetic and comparison operators.</p>
+    </div>
+</section>

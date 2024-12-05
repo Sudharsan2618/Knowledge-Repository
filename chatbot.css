@@ -190,3 +190,11 @@
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
   }
+
+  #send-query {
+    background: #3498db;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+}

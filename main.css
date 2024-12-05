@@ -102,6 +102,7 @@ aside {
     flex-grow: 1;
 }
 
+
 aside a {
     text-decoration: none;
     color: var(--aside-link-color);
@@ -131,6 +132,8 @@ aside a:hover {
     transition: background-color 0.3s ease;
 }
 
+
+
 #left-nav ul li a:hover {
     background-color: var(--nav-link-hover-color);
     color: white;
@@ -146,7 +149,6 @@ aside a:hover {
 main {
     width: 85%;
     padding: 2rem;
-    padding-top: 0%;
     padding-bottom: 0%;
     overflow-y: auto;
     overflow-x: hidden;
@@ -168,7 +170,7 @@ footer {
     --footer-color: #000000;
     --body-bg: #ffffff;
     --body-color: #000000;
-    --aside-bg: #f9f9f9;
+    --aside-bg: #f1f1f1;
     --nav-link-color: #08080a;
     --aside-link-color: #060608;
     --nav-link-hover-color: #78afea;

@@ -1,0 +1,802 @@
+<section class="question">
+    <h2>Question 1: What will be the output of the following code?</h2>
+    <pre><code>def decorator(func):
+    def wrapper():
+        print("Before the function call")
+        func()
+        print("After the function call")
+    return wrapper
+
+@decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q1" value="a"> Before the function call \n Hello! \n After the function call
+            </label>
+            <label>
+                <input type="radio" name="q1" value="b"> Before the function call \n After the function call
+            </label>
+            <label>
+                <input type="radio" name="q1" value="c"> Hello!
+            </label>
+            <label>
+                <input type="radio" name="q1" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q1', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q1" style="display:none;">
+        <p class="correct">Correct! The output is as expected because the decorator adds behavior before and after the function call.</p>
+        <p class="incorrect">Incorrect. The correct answer is the entire output: Before the function call \n Hello! \n After the function call, as decorators wrap functions.</p>
+        <button onclick="toggleExplanation('explanation-q1', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q1" style="display:none;">
+            <p>Explanation: In Python, decorators are used to modify the behavior of a function. Here, the decorator <code>@decorator</code> adds print statements before and after the execution of the <code>say_hello()</code> function.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q1')">💡</div>
+    <div class="tip" id="tip-q1" style="display:none;">
+        <p>Tip: Decorators can modify the behavior of functions or methods by wrapping them with additional functionality.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 2: What will be the output of the following code?</h2>
+    <pre><code>class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __str__(self):
+        return f"MyClass with value {self.value}"
+
+obj = MyClass(5)
+print(obj)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q2" value="a"> MyClass with value 5
+            </label>
+            <label>
+                <input type="radio" name="q2" value="b"> <__main__.MyClass object at 0x7f8b2a91d7c0>
+            </label>
+            <label>
+                <input type="radio" name="q2" value="c"> 5
+            </label>
+            <label>
+                <input type="radio" name="q2" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q2', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q2" style="display:none;">
+        <p class="correct">Correct! The output is "MyClass with value 5" because the <code>__str__()</code> method is called when printing the object.</p>
+        <p class="incorrect">Incorrect. The correct answer is "MyClass with value 5", as the <code>__str__</code> method defines the string representation of the object.</p>
+        <button onclick="toggleExplanation('explanation-q2', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q2" style="display:none;">
+            <p>Explanation: The <code>__str__</code> method in a Python class defines the string representation of the object. When <code>print(obj)</code> is called, Python uses this method to print the desired output.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q2')">💡</div>
+    <div class="tip" id="tip-q2" style="display:none;">
+        <p>Tip: Define the <code>__str__</code> method to specify the string representation of objects in your classes.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 3: What is the output of this code?</h2>
+    <pre><code>class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __call__(self, x):
+        return self.value + x
+
+obj = MyClass(10)
+print(obj(5))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q3" value="a"> 15
+            </label>
+            <label>
+                <input type="radio" name="q3" value="b"> 10
+            </label>
+            <label>
+                <input type="radio" name="q3" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q3" value="d"> 5
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q3', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q3" style="display:none;">
+        <p class="correct">Correct! The output is 15 because the <code>__call__</code> method is used to make instances callable, and <code>obj(5)</code> adds 5 to the value 10.</p>
+        <p class="incorrect">Incorrect. The correct answer is 15 because the object is callable due to the <code>__call__</code> method.</p>
+        <button onclick="toggleExplanation('explanation-q3', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q3" style="display:none;">
+            <p>Explanation: The <code>__call__</code> method allows an object to be called like a function. Here, <code>obj(5)</code> invokes the <code>__call__</code> method and adds 10 (the initial value) to 5, resulting in 15.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q3')">💡</div>
+    <div class="tip" id="tip-q3" style="display:none;">
+        <p>Tip: You can make instances of your classes callable by defining the <code>__call__</code> method.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 4: What will this code output?</h2>
+    <pre><code>import contextlib
+
+@contextlib.contextmanager
+def my_context_manager():
+    print("Entering the context")
+    yield
+    print("Exiting the context")
+
+with my_context_manager():
+    print("Inside the context")</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q4" value="a"> Entering the context \n Inside the context \n Exiting the context
+            </label>
+            <label>
+                <input type="radio" name="q4" value="b"> Entering the context \n Exiting the context
+            </label>
+            <label>
+                <input type="radio" name="q4" value="c"> Inside the context
+            </label>
+            <label>
+                <input type="radio" name="q4" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q4', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q4" style="display:none;">
+        <p class="correct">Correct! The output is as expected: Entering the context \n Inside the context \n Exiting the context, because of the context manager's behavior.</p>
+        <p class="incorrect">Incorrect. The correct answer is as shown, due to the <code>contextmanager</code> functionality.</p>
+        <button onclick="toggleExplanation('explanation-q4', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q4" style="display:none;">
+            <p>Explanation: The context manager <code>@contextlib.contextmanager</code> is used to manage resources. The <code>yield</code> statement separates the setup and teardown code, executing the code inside the <code>with</code> block in between.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q4')">💡</div>
+    <div class="tip" id="tip-q4" style="display:none;">
+        <p>Tip: Use the <code>contextmanager</code> decorator to easily create context managers for resource management.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 5: What will be the output of the following code?</h2>
+    <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q5" value="a"> 120
+            </label>
+            <label>
+                <input type="radio" name="q5" value="b"> 24
+            </label>
+            <label>
+                <input type="radio" name="q5" value="c"> 6
+            </label>
+            <label>
+                <input type="radio" name="q5" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q5', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q5" style="display:none;">
+        <p class="correct">Correct! The output is 120 because the <code>factorial</code> function recursively multiplies the number until it reaches 0.</p>
+        <p class="incorrect">Incorrect. The correct answer is 120 because the factorial of 5 is 5 * 4 * 3 * 2 * 1.</p>
+        <button onclick="toggleExplanation('explanation-q5', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q5" style="display:none;">
+            <p>Explanation: The <code>factorial</code> function calculates the product of all positive integers less than or equal to the input. Here, <code>factorial(5)</code> computes 5 * 4 * 3 * 2 * 1, resulting in 120.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q5')">💡</div>
+    <div class="tip" id="tip-q5" style="display:none;">
+        <p>Tip: Recursion is often used to solve problems like factorial, where the problem can be divided into smaller sub-problems.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 6: What will the following code output?</h2>
+    <pre><code>from functools import lru_cache
+
+@lru_cache(maxsize=3)
+def fib(n):
+    if n < 2:
+        return n
+    return fib(n-1) + fib(n-2)
+
+print(fib(4))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q6" value="a"> 3
+            </label>
+            <label>
+                <input type="radio" name="q6" value="b"> 5
+            </label>
+            <label>
+                <input type="radio" name="q6" value="c"> 8
+            </label>
+            <label>
+                <input type="radio" name="q6" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q6', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q6" style="display:none;">
+        <p class="correct">Correct! The output is 3 because <code>fib(4)</code> computes the Fibonacci sequence and the cache limits the number of stored values to 3.</p>
+        <p class="incorrect">Incorrect. The correct answer is 3 because the Fibonacci sequence up to <code>fib(4)</code> is 0, 1, 1, 2, 3.</p>
+        <button onclick="toggleExplanation('explanation-q6', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q6" style="display:none;">
+            <p>Explanation: The <code>@lru_cache</code> decorator caches the results of the <code>fib</code> function, but only keeps the last 3 results. This optimizes recursive calls by reusing previously calculated values.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q6')">💡</div>
+    <div class="tip" id="tip-q6" style="display:none;">
+        <p>Tip: Use <code>@lru_cache</code> to cache the results of expensive function calls for better performance.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 7: What will the following code output?</h2>
+    <pre><code>class MyMeta(type):
+    def __new__(cls, name, bases, dct):
+        dct['extra'] = 42
+        return super().__new__(cls, name, bases, dct)
+
+class MyClass(metaclass=MyMeta):
+    pass
+
+print(MyClass.extra)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q7" value="a"> 42
+            </label>
+            <label>
+                <input type="radio" name="q7" value="b"> Error
+            </label>
+            <label>
+                <input type="radio" name="q7" value="c"> None
+            </label>
+            <label>
+                <input type="radio" name="q7" value="d"> 0
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q7', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q7" style="display:none;">
+        <p class="correct">Correct! The output is 42 because the metaclass <code>MyMeta</code> adds an attribute <code>extra</code> to the class.</p>
+        <p class="incorrect">Incorrect. The correct answer is 42 because the metaclass <code>MyMeta</code> dynamically adds attributes to the class.</p>
+        <button onclick="toggleExplanation('explanation-q7', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q7" style="display:none;">
+            <p>Explanation: In Python, metaclasses control the creation of classes. In this example, the <code>MyMeta</code> metaclass adds the attribute <code>extra</code> to <code>MyClass</code> during its creation.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q7')">💡</div>
+    <div class="tip" id="tip-q7" style="display:none;">
+        <p>Tip: Metaclasses allow you to customize class creation, including adding attributes or modifying behavior.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 8: What will the following code output?</h2>
+    <pre><code>class MyClass:
+    def __init__(self, name):
+        self.name = name
+
+    def __eq__(self, other):
+        return self.name == other.name
+
+obj1 = MyClass("Alice")
+obj2 = MyClass("Alice")
+obj3 = MyClass("Bob")
+
+print(obj1 == obj2)
+print(obj1 == obj3)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q8" value="a"> True \n False
+            </label>
+            <label>
+                <input type="radio" name="q8" value="b"> False \n False
+            </label>
+            <label>
+                <input type="radio" name="q8" value="c"> True \n True
+            </label>
+            <label>
+                <input type="radio" name="q8" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q8', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q8" style="display:none;">
+        <p class="correct">Correct! The output is True for <code>obj1 == obj2</code> because their names are equal, and False for <code>obj1 == obj3</code> because their names differ.</p>
+        <p class="incorrect">Incorrect. The correct answer is True \n False, as the <code>__eq__</code> method compares the <code>name</code> attributes.</p>
+        <button onclick="toggleExplanation('explanation-q8', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q8" style="display:none;">
+            <p>Explanation: In Python, you can define custom equality behavior for objects by implementing the <code>__eq__</code> method. Here, <code>obj1 == obj2</code> is True because both have the name "Alice", while <code>obj1 == obj3</code> is False because their names differ.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q8')">💡</div>
+    <div class="tip" id="tip-q8" style="display:none;">
+        <p>Tip: Override the <code>__eq__</code> method to customize equality comparison for your class instances.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 9: What will the output of this code be?</h2>
+    <pre><code>from collections import deque
+
+d = deque([1, 2, 3])
+d.appendleft(0)
+print(d)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q9" value="a"> deque([0, 1, 2, 3])
+            </label>
+            <label>
+                <input type="radio" name="q9" value="b"> deque([1, 2, 3, 0])
+            </label>
+            <label>
+                <input type="radio" name="q9" value="c"> [0, 1, 2, 3]
+            </label>
+            <label>
+                <input type="radio" name="q9" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q9', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q9" style="display:none;">
+        <p class="correct">Correct! The output is deque([0, 1, 2, 3]) because <code>appendleft()</code> adds an element to the left of the deque.</p>
+        <p class="incorrect">Incorrect. The correct answer is deque([0, 1, 2, 3]) because <code>appendleft()</code> adds an element to the front of the deque.</p>
+        <button onclick="toggleExplanation('explanation-q9', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q9" style="display:none;">
+            <p>Explanation: The <code>deque</code> class from the <code>collections</code> module supports efficient appends and pops from both ends. The <code>appendleft()</code> method adds an item to the front of the deque.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q9')">💡</div>
+    <div class="tip" id="tip-q9" style="display:none;">
+        <p>Tip: Use <code>deque</code> when you need efficient popping and appending from both ends of a collection.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 10: What is the output of this code?</h2>
+    <pre><code>import itertools
+
+result = list(itertools.chain([1, 2], [3, 4]))
+print(result)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q10" value="a"> [1, 2, 3, 4]
+            </label>
+            <label>
+                <input type="radio" name="q10" value="b"> [1, 2]
+            </label>
+            <label>
+                <input type="radio" name="q10" value="c"> [3, 4]
+            </label>
+            <label>
+                <input type="radio" name="q10" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q10', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q10" style="display:none;">
+        <p class="correct">Correct! The output is [1, 2, 3, 4] because <code>itertools.chain()</code> combines multiple iterables into one.</p>
+        <p class="incorrect">Incorrect. The correct answer is [1, 2, 3, 4] because <code>chain</code> is used to combine iterables into a single sequence.</p>
+        <button onclick="toggleExplanation('explanation-q10', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q10" style="display:none;">
+            <p>Explanation: The <code>itertools.chain()</code> function is used to concatenate multiple iterables into a single iterable. In this case, it combines the lists <code>[1, 2]</code> and <code>[3, 4]</code> into one list.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q10')">💡</div>
+    <div class="tip" id="tip-q10" style="display:none;">
+        <p>Tip: Use <code>itertools.chain()</code> when you need to iterate over multiple iterables as if they were one.</p>
+    </div>
+</section>
+<section class="question">
+    <h2>Question 11: What will be the output of the following code?</h2>
+    <pre><code>from threading import Thread
+
+def print_numbers():
+    for i in range(5):
+        print(i)
+
+thread = Thread(target=print_numbers)
+thread.start()
+thread.join()</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q11" value="a"> 0 1 2 3 4
+            </label>
+            <label>
+                <input type="radio" name="q11" value="b"> 0 1 2 3 4 printed in order
+            </label>
+            <label>
+                <input type="radio" name="q11" value="c"> 0 1 2 3 4 with some interleaving
+            </label>
+            <label>
+                <input type="radio" name="q11" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q11', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q11" style="display:none;">
+        <p class="correct">Correct! The output will be 0 1 2 3 4 in order because the main thread waits for the child thread to finish due to <code>join()</code>.</p>
+        <p class="incorrect">Incorrect. The correct answer is 0 1 2 3 4, because the <code>join()</code> method ensures the main thread waits for the thread to finish before proceeding.</p>
+        <button onclick="toggleExplanation('explanation-q11', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q11" style="display:none;">
+            <p>Explanation: The <code>thread.start()</code> begins a separate thread that prints numbers. The <code>join()</code> ensures the main thread waits for the thread to complete before proceeding.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q11')">💡</div>
+    <div class="tip" id="tip-q11" style="display:none;">
+        <p>Tip: Use <code>thread.join()</code> to block the calling thread until the thread it is called on terminates.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 12: What will be the output of the following code?</h2>
+    <pre><code>def foo(a, b):
+    return a + b
+
+print(foo(2, "3"))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q12" value="a"> 5
+            </label>
+            <label>
+                <input type="radio" name="q12" value="b"> 23
+            </label>
+            <label>
+                <input type="radio" name="q12" value="c"> Error
+            </label>
+            <label>
+                <input type="radio" name="q12" value="d"> 6
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q12', 'c')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q12" style="display:none;">
+        <p class="correct">Correct! The code will raise a TypeError because you cannot add an integer and a string directly.</p>
+        <p class="incorrect">Incorrect. The correct answer is Error. You cannot add an integer and a string together without converting them to the same type.</p>
+        <button onclick="toggleExplanation('explanation-q12', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q12" style="display:none;">
+            <p>Explanation: In Python, you cannot perform arithmetic operations between incompatible types (int and str). This will raise a TypeError.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q12')">💡</div>
+    <div class="tip" id="tip-q12" style="display:none;">
+        <p>Tip: Always ensure that operands in arithmetic operations are of compatible types, e.g., both integers or both strings.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 13: What is the output of this code?</h2>
+    <pre><code>def generate_numbers(n):
+    for i in range(n):
+        yield i
+
+gen = generate_numbers(3)
+print(list(gen))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q13" value="a"> [0, 1, 2]
+            </label>
+            <label>
+                <input type="radio" name="q13" value="b"> [1, 2, 3]
+            </label>
+            <label>
+                <input type="radio" name="q13" value="c"> [0, 1]
+            </label>
+            <label>
+                <input type="radio" name="q13" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q13', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q13" style="display:none;">
+        <p class="correct">Correct! The output is [0, 1, 2] because <code>yield</code> returns the values one by one as a generator, and <code>list()</code> collects them.</p>
+        <p class="incorrect">Incorrect. The correct answer is [0, 1, 2], as the generator yields values starting from 0 up to n-1.</p>
+        <button onclick="toggleExplanation('explanation-q13', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q13" style="display:none;">
+            <p>Explanation: The <code>yield</code> keyword is used in Python to make a function return a generator. The function <code>generate_numbers</code> yields values from 0 to <code>n-1</code>, and <code>list(gen)</code> collects them into a list.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q13')">💡</div>
+    <div class="tip" id="tip-q13" style="display:none;">
+        <p>Tip: Use <code>yield</code> to create generator functions that allow lazy evaluation and avoid memory overhead.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 14: What is the output of the following code?</h2>
+    <pre><code>class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def __eq__(self, other):
+        return self.value == other.value
+
+obj1 = MyClass(10)
+obj2 = MyClass(10)
+obj3 = MyClass(20)
+
+print(obj1 == obj2)
+print(obj1 == obj3)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q14" value="a"> True \n False
+            </label>
+            <label>
+                <input type="radio" name="q14" value="b"> True \n True
+            </label>
+            <label>
+                <input type="radio" name="q14" value="c"> False \n False
+            </label>
+            <label>
+                <input type="radio" name="q14" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q14', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q14" style="display:none;">
+        <p class="correct">Correct! The output is True for <code>obj1 == obj2</code> because their <code>value</code> attributes are the same, and False for <code>obj1 == obj3</code> because their <code>value</code> attributes differ.</p>
+        <p class="incorrect">Incorrect. The correct answer is True \n False, as <code>__eq__</code> is used to compare objects based on their <code>value</code> attribute.</p>
+        <button onclick="toggleExplanation('explanation-q14', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q14" style="display:none;">
+            <p>Explanation: The <code>__eq__</code> method allows you to define custom behavior for equality comparisons. Here, the method compares the <code>value</code> attributes of <code>obj1</code>, <code>obj2</code>, and <code>obj3</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q14')">💡</div>
+    <div class="tip" id="tip-q14" style="display:none;">
+        <p>Tip: Override the <code>__eq__</code> method to define custom equality comparisons for your class instances.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 15: What is the output of the following code?</h2>
+    <pre><code>import time
+
+def delay():
+    time.sleep(2)
+    return "Done!"
+
+result = delay()
+print(result)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q15" value="a"> Done!
+            </label>
+            <label>
+                <input type="radio" name="q15" value="b"> Error
+            </label>
+            <label>
+                <input type="radio" name="q15" value="c"> None
+            </label>
+            <label>
+                <input type="radio" name="q15" value="d"> "Done!" after 2 seconds
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q15', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q15" style="display:none;">
+        <p class="correct">Correct! The output is "Done!" after 2 seconds because <code>time.sleep(2)</code> causes a 2-second delay before returning the value.</p>
+        <p class="incorrect">Incorrect. The correct answer is "Done!", as the program waits for 2 seconds before returning the result of <code>delay()</code>.</p>
+        <button onclick="toggleExplanation('explanation-q15', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q15" style="display:none;">
+            <p>Explanation: The <code>time.sleep(2)</code> function pauses the execution for 2 seconds before the function returns the string "Done!".</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q15')">💡</div>
+    <div class="tip" id="tip-q15" style="display:none;">
+        <p>Tip: Use <code>time.sleep()</code> to introduce delays in your program, useful for rate limiting or simulating long-running processes.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 16: What will be the output of the following code?</h2>
+    <pre><code>numbers = [1, 2, 3]
+doubled = [x * 2 for x in numbers]
+print(doubled)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q16" value="a"> [2, 4, 6]
+            </label>
+            <label>
+                <input type="radio" name="q16" value="b"> [1, 2, 3]
+            </label>
+            <label>
+                <input type="radio" name="q16" value="c"> [1, 4, 9]
+            </label>
+            <label>
+                <input type="radio" name="q16" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q16', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q16" style="display:none;">
+        <p class="correct">Correct! The output is [2, 4, 6] because list comprehension is used to double each element of the list.</p>
+        <p class="incorrect">Incorrect. The correct answer is [2, 4, 6] because the list comprehension multiplies each element by 2.</p>
+        <button onclick="toggleExplanation('explanation-q16', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q16" style="display:none;">
+            <p>Explanation: List comprehensions provide a concise way to create lists by applying an expression to each element in an iterable. In this case, each element is multiplied by 2.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q16')">💡</div>
+    <div class="tip" id="tip-q16" style="display:none;">
+        <p>Tip: Use list comprehensions for concise and efficient ways to generate new lists based on existing iterables.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 17: What is the output of the following code?</h2>
+    <pre><code>def foo(x, y=5):
+    return x + y
+
+print(foo(3))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q17" value="a"> 8
+            </label>
+            <label>
+                <input type="radio" name="q17" value="b"> 3
+            </label>
+            <label>
+                <input type="radio" name="q17" value="c"> 5
+            </label>
+            <label>
+                <input type="radio" name="q17" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q17', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q17" style="display:none;">
+        <p class="correct">Correct! The output is 8 because the function <code>foo</code> uses the default value of <code>y</code>, which is 5, and adds it to <code>x</code>, which is 3.</p>
+        <p class="incorrect">Incorrect. The correct answer is 8, because the default value of <code>y</code> is used.</p>
+        <button onclick="toggleExplanation('explanation-q17', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q17" style="display:none;">
+            <p>Explanation: When a function has default arguments, they are used if no value is passed for that argument. Here, <code>y=5</code> is the default, so <code>3 + 5</code> is computed.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q17')">💡</div>
+    <div class="tip" id="tip-q17" style="display:none;">
+        <p>Tip: Use default arguments in functions to provide fallback values for parameters that might not always be passed.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 18: What will this code output?</h2>
+    <pre><code>numbers = [10, 20, 30]
+numbers[0:2] = [1, 2]
+print(numbers)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q18" value="a"> [1, 2, 30]
+            </label>
+            <label>
+                <input type="radio" name="q18" value="b"> [1, 2, 20, 30]
+            </label>
+            <label>
+                <input type="radio" name="q18" value="c"> [1, 2]
+            </label>
+            <label>
+                <input type="radio" name="q18" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q18', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q18" style="display:none;">
+        <p class="correct">Correct! The output is [1, 2, 30] because the slice [0:2] is replaced by [1, 2], leaving the last element, 30, unchanged.</p>
+        <p class="incorrect">Incorrect. The correct answer is [1, 2, 30], as the slice [0:2] is replaced with [1, 2].</p>
+        <button onclick="toggleExplanation('explanation-q18', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q18" style="display:none;">
+            <p>Explanation: In Python, you can assign a new list to a slice of an existing list. Here, the slice [0:2] is replaced with [1, 2], and the last element remains intact.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q18')">💡</div>
+    <div class="tip" id="tip-q18" style="display:none;">
+        <p>Tip: Use slicing to replace portions of lists with new values or to manipulate sublists.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 19: What will this code output?</h2>
+    <pre><code>def foo(x, y):
+    return x + y
+
+foo(1, 2)</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q19" value="a"> 3
+            </label>
+            <label>
+                <input type="radio" name="q19" value="b"> None
+            </label>
+            <label>
+                <input type="radio" name="q19" value="c"> 12
+            </label>
+            <label>
+                <input type="radio" name="q19" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q19', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q19" style="display:none;">
+        <p class="correct">Correct! The output is 3 because the function returns the sum of <code>1</code> and <code>2</code>.</p>
+        <p class="incorrect">Incorrect. The correct answer is 3 because the function <code>foo</code> adds <code>1</code> and <code>2</code>.</p>
+        <button onclick="toggleExplanation('explanation-q19', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q19" style="display:none;">
+            <p>Explanation: The function <code>foo(x, y)</code> takes two arguments, adds them, and returns the result. In this case, <code>foo(1, 2)</code> returns 3.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q19')">💡</div>
+    <div class="tip" id="tip-q19" style="display:none;">
+        <p>Tip: Ensure that your functions return the correct value based on the logic inside.</p>
+    </div>
+</section>
+
+<section class="question">
+    <h2>Question 20: What is the result of this code?</h2>
+    <pre><code>def add(a, b=2, c=3):
+    return a + b + c
+
+print(add(1))</code></pre>
+    <form>
+        <div class="options">
+            <label>
+                <input type="radio" name="q20" value="a"> 6
+            </label>
+            <label>
+                <input type="radio" name="q20" value="b"> 5
+            </label>
+            <label>
+                <input type="radio" name="q20" value="c"> 4
+            </label>
+            <label>
+                <input type="radio" name="q20" value="d"> Error
+            </label>
+        </div>
+        <button type="button" onclick="checkAnswer('q20', 'a')">Submit</button>
+    </form>
+    <div class="feedback" id="feedback-q20" style="display:none;">
+        <p class="correct">Correct! The output is 6 because the default values of <code>b</code> and <code>c</code> are used (2 and 3 respectively), and <code>a</code> is 1.</p>
+        <p class="incorrect">Incorrect. The correct answer is 6 because the function uses default arguments for <code>b</code> and <code>c</code>.</p>
+        <button onclick="toggleExplanation('explanation-q20', this)">Show Explanation</button>
+        <div class="explanation" id="explanation-q20" style="display:none;">
+            <p>Explanation: The function <code>add</code> uses default values for <code>b</code> and <code>c</code>. Since no values are provided for these parameters, the result is <code>1 + 2 + 3 = 6</code>.</p>
+        </div>
+    </div>    
+    <div class="tip-icon" onclick="toggleTip('tip-q20')">💡</div>
+    <div class="tip" id="tip-q20" style="display:none;">
+        <p>Tip: You can define default argument values in functions to make parameters optional.</p>
+    </div>
+</section>

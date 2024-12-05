@@ -1,0 +1,26 @@
+/* Style the icons container to position them on the right */
+#icons-container {
+    /* position: fixed; /* Fix the icons to the side */
+    /* padding-top: 10%; */ 
+    right: 5%; /* Place the icons 10px from the right side */
+    transform: translateY( -50%); /* Adjust to truly center them */
+    z-index: 1000; /* Ensure they appear on top of other content */
+}
+
+/* Style individual icons */
+#icons-container i {
+    font-size: 20px; /* Adjust icon size */
+    margin-right: 20px; /* Space between icons horizontally */
+    cursor: pointer; /* Change the cursor to pointer on hover */
+    color: #333; /* Icon color */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+#icons-container i:last-child {
+    margin-right: 0; /* Removes the margin on the last icon */
+}
+
+/* Change color on hover */
+#icons-container i:hover {
+    color: #007bff; /* Highlight color */
+}

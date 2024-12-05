@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="iframe.css">
     <link rel="stylesheet" href="chatbot.css">
     <link rel="stylesheet" href="questions.css">
+    <link rel="stylesheet" href="speech.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 </head>
 
 <body>
@@ -24,6 +27,7 @@
                     <li><a href="#test" onclick="showNavContent('test')">Python Test</a></li>
                 </ul>
             </nav>
+
             <button id="theme-toggle">Toggle Theme</button>
         </div>
     </header>
@@ -33,8 +37,8 @@
             <!-- Python Basics Nav Content -->
             <div id="tutorial-nav" class="nav-content">
                 <ul>
-                    <li><a href="#python-getting-started" onclick="loadContent('/python-getting-started.html')">Getting Started</a></li>
-                    <li><a href="#data-types" onclick="loadContent('/data-types.html')">Variables and Data Types</a></li>
+                    <li><a href="#python-getting-started" onclick="loadContent('python-getting-started.html')">Getting Started</a></li>
+                    <li><a href="#data-types" onclick="loadContent('data-types.html')">Variables and Data Types</a></li>
                     <li><a href="#conditional-statements" onclick="loadContent('conditional-statements.html')">Control Flow</a></li>
                     <li><a href="#loops" onclick="loadContent('loops.html')">Loops</a></li>
                     <li><a href="#functions" onclick="loadContent('functions.html')">Functions</a></li>
@@ -67,13 +71,15 @@
         </aside>
 
         <main id="main-content">
-            <button id="start-reading">Start Reading</button>
-            <button id="pause-reading" style="display:none;">Pause Reading</button>
-            <button id="resume-reading" style="display:none;">Resume Reading</button>
-            <button id="stop-reading" style="display:none;">Stop Reading</button>
-            <button id="restart-reading" style="display:none;">Restart Reading</button>
-            <button id="read-aloud-button">Read Aloud</button>
-         <div id="content">
+            <div id="icons-container">
+                <i id="start-reading" class="fas fa-play" title="Start Reading"></i>
+                <i id="pause-reading" class="fas fa-pause" style="display:none;" title="Pause Reading"></i>
+                <i id="resume-reading" class="fas fa-play-circle" style="display:none;" title="Resume Reading"></i>
+                <i id="stop-reading" class="fas fa-stop" style="display:none;" title="Stop Reading"></i>
+                <i id="restart-reading" class="fas fa-redo" style="display:none;" title="Restart Reading"></i>
+                <i id="read-aloud-button" class="fas fa-volume-up" title="Read Aloud"></i>
+                </div>
+            <div id="content">
          </div>
         </main>
     </div>

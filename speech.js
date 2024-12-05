@@ -51,7 +51,7 @@ function readContentAloud() {
     // Start reading the content
     window.speechSynthesis.speak(currentSpeech);
 
-    // Show appropriate buttons
+    // Show appropriate icons
     document.getElementById('start-reading').style.display = 'none';
     document.getElementById('pause-reading').style.display = 'inline';
     document.getElementById('stop-reading').style.display = 'inline';
@@ -67,7 +67,7 @@ function readContentAloud() {
         isReading = false;
         isPaused = false;
         console.log("Finished reading content.");
-        resetButtons();
+        resetIcons();
     };
 
     currentSpeech.onpause = function() {
@@ -102,7 +102,7 @@ function stopReading() {
         window.speechSynthesis.cancel();
         isReading = false;
         isPaused = false;
-        resetButtons();
+        resetIcons();
         console.log("Reading stopped.");
     }
 }
@@ -112,7 +112,7 @@ function restartReading() {
     readContentAloud();  // Restart reading the content
 }
 
-function resetButtons() {
+function resetIcons() {
     document.getElementById('start-reading').style.display = 'inline';
     document.getElementById('pause-reading').style.display = 'none';
     document.getElementById('stop-reading').style.display = 'none';
